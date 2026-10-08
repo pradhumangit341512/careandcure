@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TRT Care & Cure Wellness – Website Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g900:#04472a;--g700:#00663a;--g500:#2f9e44;--leaf:#6db515;--blue:#1f4a8f;--mint:#eaf5ee;--bg:#fbfdfb;--card:#fff;--ink:#14281d;--mute:#4d6356;--line:#d5e6da;--hero:#04472a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1912;--card:#14251b;--ink:#e6f2ea;--mute:#a3baa9;--line:#25402f;--mint:#12251a;--blue:#8db3ee;--g700:#3fbf72;--hero:#04301d}}
+:root[data-theme="dark"]{--bg:#0d1912;--card:#14251b;--ink:#e6f2ea;--mute:#a3baa9;--line:#25402f;--mint:#12251a;--blue:#8db3ee;--g700:#3fbf72;--hero:#04301d}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark{width:38px;height:38px;position:relative;flex:none}
+.mark:before,.mark:after{content:"";position:absolute;background:var(--g700);border-radius:4px}
+.mark:before{left:13px;top:0;width:12px;height:38px}.mark:after{left:0;top:13px;width:38px;height:12px}
+.mark i{position:absolute;left:9px;top:5px;width:22px;height:28px;background:var(--leaf);border-radius:100% 0 100% 0;transform:rotate(-8deg);z-index:1;border:2px solid var(--bg)}
+.logo b{font:600 20px Fraunces,serif;line-height:1}.logo small{display:block;font-size:11px;color:var(--mute);margin-top:3px}
+nav{display:flex;gap:26px;font-size:15px;font-weight:500}nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--g700)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px;border:2px solid var(--g700);background:var(--g700);color:#fff;cursor:pointer;font-family:inherit}
+.btn.alt{background:transparent;color:inherit;border-color:currentColor}
+.hero{background:var(--hero);color:#fff;position:relative;overflow:hidden;padding:72px 0 0}
+.hero:before{content:"";position:absolute;right:-8%;top:-30%;width:620px;height:760px;background:linear-gradient(160deg,var(--leaf),#2f9e44);border-radius:100% 0 100% 0;opacity:.9;transform:rotate(-12deg)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+.switch{display:inline-flex;background:rgba(255,255,255,.12);border-radius:999px;padding:4px;margin-bottom:28px}
+.switch button{border:0;background:none;color:#fff;padding:10px 20px;border-radius:999px;font:600 15px Figtree,sans-serif;cursor:pointer}
+.switch button[aria-selected=true]{background:#fff;color:var(--g900)}
+.hero h1{font-size:clamp(34px,5.2vw,58px);max-width:15em}
+.hero p.lead{margin:20px 0 30px;font-size:19px;max-width:34em;opacity:.92}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn{background:#fff;color:var(--g900);border-color:#fff}.hero .btn.alt{background:none;color:#fff;border-color:#fff}
+.sos{background:var(--card);color:var(--ink);border-radius:20px 20px 0 0;padding:28px;box-shadow:0 -4px 0 var(--leaf)}
+.sos h3{font-size:22px;margin-bottom:6px}.sos .num{font:600 30px Fraunces,serif;color:var(--g700);text-decoration:none;display:block;margin:8px 0}
+.sos p{color:var(--mute);font-size:15px}
+.tag{background:var(--mint);text-align:center;padding:18px 24px;font:500 20px Fraunces,serif;color:var(--g700)}
+section{padding:84px 0}
+h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:12px}
+.sub{color:var(--mute);max-width:38em;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.svc:nth-child(3n+2){border-radius:18px 40px 18px 18px}
+.svc h3{font-size:19px;color:var(--blue);margin:14px 0 6px}.svc p{color:var(--mute);font-size:15px}
+.ico{width:46px;height:46px;border-radius:14px;background:var(--mint);display:grid;place-items:center}
+.ico svg{width:24px;height:24px;stroke:var(--g700);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.band{background:var(--mint)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.why{list-style:none;padding:0;display:grid;gap:14px}
+.why li{display:flex;gap:14px;align-items:flex-start;font-size:18px;font-weight:500}
+.why li:before{content:"";flex:none;width:22px;height:22px;margin-top:3px;background:var(--leaf);border-radius:100% 0 100% 0}
+.steps{counter-reset:s;display:grid;gap:0;border-left:3px solid var(--leaf);padding-left:26px}
+.steps div{counter-increment:s;position:relative;padding:0 0 26px}
+.steps div:before{content:counter(s);position:absolute;left:-44px;top:0;width:32px;height:32px;border-radius:50%;background:var(--g700);color:#fff;display:grid;place-items:center;font-weight:600;font-size:15px}
+.steps b{display:block;font-size:18px}.steps span{color:var(--mute);font-size:15px}
+.pk{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pkg{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.pkg.top{background:var(--g700);color:#fff;border-color:var(--g700)}.pkg.top p{color:#e3f3ea}
+.pkg h3{font-size:21px}.pkg p{color:var(--mute);font-size:15px;flex:1}
+.pkg a{font-weight:600;font-size:15px}
+.partners{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:28px;color:var(--mute);font-size:15px}
+.partners span{border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:999px;font-weight:600;color:var(--ink)}
+.contact{background:var(--g900);color:#fff}
+.contact .two{align-items:center}
+.contact a{color:#fff}.contact dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin-top:20px}.contact dt{opacity:.7}
+.form{background:var(--card);color:var(--ink);padding:28px;border-radius:20px;display:grid;gap:14px}
+.form label{font-size:14px;font-weight:600;display:grid;gap:6px}
+.form input,.form select{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+footer{background:var(--g900);color:#b9d6c5;font-size:14px;padding:22px 0;border-top:1px solid rgba(255,255,255,.12)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){.hero .wrap,.two{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.pk{grid-template-columns:1fr 1fr}nav{display:none}section{padding:60px 0}.hero:before{width:380px;height:480px}}
+@media(max-width:560px){.grid,.pk{grid-template-columns:1fr}.logo small{display:none}.btn{padding:10px 16px}}
+@media(prefers-reduced-motion:no-preference){.hero h1,.hero .lead{transition:opacity .25s}.fade{opacity:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top" aria-label="TRT Care & Cure Wellness"><span class="mark"><i></i></span><span><b>Care &amp; Cure</b><small>Trusted • Response • Treatment</small></span></a>
+<nav><a href="#services">Services</a><a href="#why">Why TRT</a><a href="#packages">Health packages</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="tel:+918799226467">Call 24×7</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div style="padding-bottom:64px">
+<div class="switch" role="tablist" aria-label="Choose your care">
+<button role="tab" aria-selected="true" data-a="org">For industries</button>
+<button role="tab" aria-selected="false" data-a="fam">For families</button>
+</div>
+<h1 id="h1"></h1><p class="lead" id="lead"></p>
+<div class="cta"><a class="btn" href="#contact" id="cta1"></a><a class="btn alt" href="#services">See services</a></div>
+</div>
+<aside class="sos"><h3>Every second matters</h3><p>Emergency support and ambulance coordination, any hour.</p><a class="num" href="tel:+918799226467">+91 87992 26467</a><p>Shivdhara Complex, Sanand GIDC. Now serving Bharuch.</p></aside>
+</div></div>
+<div class="tag">“Every second matters, every patient matters.”</div>
+
+<section id="services"><div class="wrap">
+<h2 id="sh"></h2><p class="sub" id="ss"></p>
+<div class="grid" id="svcs"></div>
+<div class="partners">Backed by <span>Sanand Industries Association</span><span>Sterling Accuris Pathology</span><span>Krishna Shalby Hospital, Ghuma</span><span>Palmland Hospital</span></div>
+</div></section>
+
+<section class="band" id="why"><div class="wrap two">
+<div><h2 id="wh"></h2><p class="sub" id="ws"></p><ul class="why" id="wl"></ul></div>
+<div><h2>How we work with you</h2><p class="sub">A clear process, from first call to ongoing reporting.</p>
+<div class="steps"><div><b>Requirement analysis</b><span>We learn your workforce, risks and compliance needs.</span></div><div><b>Customized health plan</b><span>Checks and packages matched to each role.</span></div><div><b>On-site implementation</b><span>Doctors and technicians come to you, or you visit us.</span></div><div><b>Continuous monitoring</b><span>Follow-ups so small issues stay small.</span></div><div><b>Reporting and improvement</b><span>Accurate reports and steps to do better next cycle.</span></div></div></div>
+</div></section>
+
+<section id="packages"><div class="wrap">
+<h2>Health packages for every need</h2><p class="sub">Tests are processed with our pathology partner, with confidential, accurate reports.</p>
+<div class="pk">
+<div class="pkg"><h3>Basic health check</h3><p>Essential tests for overall well-being.</p><a href="#contact">Ask for details</a></div>
+<div class="pkg"><h3>Advance health check</h3><p>Comprehensive tests for in-depth analysis.</p><a href="#contact">Ask for details</a></div>
+<div class="pkg top"><h3>Executive health check</h3><p>Advanced evaluation for executives and professionals.</p><a href="#contact">Ask for details</a></div>
+<div class="pkg"><h3>Full body health check</h3><p>Complete health assessment for total care.</p><a href="#contact">Ask for details</a></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap two">
+<div><h2>Tell us what your team or family needs</h2><p>We reply quickly. For an emergency, call now.</p>
+<dl><dt>Visit</dt><dd>Shop B/109 &amp; 111, 1st Floor, Shivdhara Complex, Bol Gam Chokdi, Sanand GIDC, Ahmedabad 382110</dd><dt>Call</dt><dd><a href="tel:+918799226467">+91 87992 26467</a></dd><dt>Email</dt><dd><a href="mailto:info@carecurewellness.com">info@carecurewellness.com</a></dd></dl></div>
+<div class="form" role="group" aria-label="Enquiry">
+<label>Your name<input placeholder="Full name"></label>
+<label>Phone<input placeholder="+91"></label>
+<label>I need care for<select><option>My company or industry</option><option>My family at home</option></select></label>
+<label>Message<input placeholder="e.g. 120 employees, pre-employment checks"></label>
+<button class="btn" type="button">Request a callback</button></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© TRT Care &amp; Cure Wellness</span><span>carecurewellness.com</span></div></footer>
+
+<script>
+const I=p=>`<span class="ico"><svg viewBox="0 0 24 24">${p}</svg></span>`;
+const ic={chk:'<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>',ear:'<path d="M8 10a4 4 0 118 0c0 3-3 3-3 6a2 2 0 01-4 0"/>',lung:'<path d="M9 4v9c0 3-2 5-5 5M15 4v9c0 3 2 5 5 5M12 4v8"/>',ecg:'<path d="M3 12h4l2-6 4 12 2-6h6"/>',sos:'<path d="M12 3v18M4 7.5l16 9M4 16.5l16-9"/>',amb:'<rect x="2" y="7" width="14" height="9" rx="2"/><path d="M16 10h4l2 3v3h-6M9 9v5M6.5 11.5h5"/>',site:'<path d="M3 11l9-7 9 7v9H3z"/><path d="M10 20v-6h4v6"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',lab:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/>',pill:'<rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-35 12 12)"/><path d="M9 9l6 6"/>',doc:'<circle cx="12" cy="7" r="3.5"/><path d="M5 21v-3a5 5 0 0110 0v3M17 8v6M14 11h6"/>',heart:'<path d="M12 20s-8-5-8-11a4.5 4.5 0 018-2.5A4.5 4.5 0 0120 9c0 6-8 11-8 11z"/>',home:'<path d="M3 11l9-7 9 7M5 10v10h14V10M12 13v4M10 15h4"/>',eld:'<circle cx="12" cy="5" r="2"/><path d="M12 8v6l-3 7M12 14l4 7M8 10l4 1 4-1"/>',guide:'<path d="M4 5h16v11H9l-5 4z"/>'};
+const D={
+org:{h:"Complete occupational healthcare for your industry",l:"Reliable, fast and effective workplace healthcare, from pre-employment checks to a full on-site health centre.",c:"Plan for my workforce",sh:"Workplace healthcare, handled end to end",ss:"Everything your factory or organization needs to keep people safe, healthy and compliant.",
+s:[["chk","Pre-employment health check-ups","Confirm every new hire is fit and ready to perform."],["chk","Periodical health check-ups","Regular check-ups to catch issues early."],["ear","Audiometry","Hearing assessment to detect early signs of hearing loss."],["lung","Spirometry","Lung function testing to evaluate respiratory health."],["ecg","ECG and X-ray","Diagnostics available on site and off site."],["sos","24×7 emergency support","Quick assistance whenever something goes wrong."],["amb","Ambulance services","Emergency and patient transport support."],["site","On-site and off-site services","Our team comes to your plant, or you visit us."],["doc","OHC setup and compliance","Occupational health centre setup and medical compliance management."]],
+wh:"Why TRT Care & Cure?",ws:"Built around response time, because in industry delays cost more than money.",w:["Quick response time","Professional medical team","Cost-effective solutions","Scalable services","Client-centric approach"]},
+fam:{h:"Complete healthcare support for you and your family, at your doorstep",l:"Your family's health deserves care, comfort and a quick response whenever you need it.",c:"Book home care",sh:"Care that comes to your home",ss:"Doctors, nurses, tests and medicines, arranged around your family's routine.",
+s:[["lab","Diagnostic and lab services","Convenient sample collection and testing."],["pill","Pharmacy and medicine support","Convenient access to prescribed medicines."],["amb","Ambulance services","Emergency and patient transportation support."],["doc","Doctor consultation","Medical consultation and healthcare guidance."],["heart","Nursing and care staff","Professional healthcare support at home."],["clock","24×7 emergency support","Quick assistance when every second matters."],["eld","Elderly care","Dedicated support for senior citizens."],["home","Home healthcare services","Care and support in the comfort of your home."],["guide","Healthcare consultancy","Guidance for ongoing healthcare needs."]],
+wh:"Why choose TRT Care & Cure?",ws:"Professional care without the queues and travel.",w:["Trusted and professional healthcare support","Quick response","Experienced healthcare professionals","Personalized care","Convenient home-based services"]}};
+const $=i=>document.getElementById(i);
+function show(k){const d=D[k];$("h1").textContent=d.h;$("lead").textContent=d.l;$("cta1").textContent=d.c;$("sh").textContent=d.sh;$("ss").textContent=d.ss;$("wh").textContent=d.wh;$("ws").textContent=d.ws;
+$("svcs").innerHTML=d.s.map(s=>`<div class="svc">${I(ic[s[0]])}<h3>${s[1]}</h3><p>${s[2]}</p></div>`).join("");
+$("wl").innerHTML=d.w.map(x=>`<li>${x}</li>`).join("");
+document.querySelectorAll(".switch button").forEach(b=>b.setAttribute("aria-selected",b.dataset.a===k))}
+document.querySelectorAll(".switch button").forEach(b=>b.onclick=()=>show(b.dataset.a));
+show("org");
+</script>
+</body>
+</html>
